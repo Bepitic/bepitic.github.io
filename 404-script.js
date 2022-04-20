@@ -327,4 +327,3 @@ segmentAngleRad = function(Xstart, Ystart, Xtarget, Ytarget, realOrWeb) {
 
 	return result;
 }
-
