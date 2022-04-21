@@ -37,7 +37,7 @@ App.setup = function() {
     for (var yy = -500; yy < 500; yy += this.gridSize) {
       // Radial field, triangular function of r with max around r0
       var r = Math.sqrt(xx*xx+yy*yy),
-          r0 = 100,
+          r0 = 45,
           field;
 
       if (r < r0) field = 255 / r0 * r;
@@ -228,9 +228,11 @@ App.draw = function() {
 
     var h, s, l, a;
 
-    h = p.hue + this.stepCount/30;
-    s = p.sat;
-    l = p.lum;
+    //h = p.hue + this.stepCount/30;
+    h = 62.03;
+    s = 82.33;
+    l = 42.16;
+    //hsl(62.03, 82.33%, 42.16%)
     a = 1;
 
     var last = this.dataXYtoCanvasXY(p.xLast, p.yLast),
