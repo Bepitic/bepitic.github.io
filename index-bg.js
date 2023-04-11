@@ -9,7 +9,7 @@ let nArray;
 function setup() {
   nArray = [];
   inner1 = floor(random(0, 1.99));
-  n = round(random(70, 500));
+  n = round(random(3, 20));
   let box = document.querySelector('#petri');
   let width = box.offsetWidth;
   let height = box.offsetHeight;
