@@ -64,7 +64,7 @@ class noiseCircle {
     }
   }
   move() {
-    strokeWeight(this.r / 300);
+    strokeWeight(this.r / 100);
     push();
     translate(this.x, this.y);
     rotate(this.nf);
@@ -77,8 +77,8 @@ class noiseCircle {
     for (let i = 0; i < this.np; i++) {
       this.n = noise(this.nf * this.p[i].x, this.nf * this.p[i].y) * this.nf2;
       this.p[i].add(
-        (this.n / 50) * cos(this.n) * sin(this.n / 2),
-        (this.n / 50) * sin(this.n) * cos(this.n / 2)
+        (this.n / 20) * cos(this.n) * sin(this.n / 2),
+        (this.n / 20) * sin(this.n) * cos(this.n / 2)
       );
       point(this.p[i].x, this.p[i].y);
     }
