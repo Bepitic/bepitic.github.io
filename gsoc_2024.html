@@ -54,7 +54,7 @@
     </header>
     <main>
         <article class="post">
-            <h2>Integrating Vision Large Language Models into Anomalib</h2>
+		<h2>Integrating Vision Large Language Models into <a href="https://anomalib.readthedocs.io/en/latest/" target="_blank">Anomalib</a></h2>
             <p>During my time as a Software Engineer - Machine Learning in the Google Summer of Code program (May 2024 - Aug 2024), I worked on an exciting project with OpenVINO's Anomalib. My main focus was on integrating Vision Large Language Models (VLLMs) into the Anomalib framework to achieve Zero/Few Shot anomaly detection models.</p>
             
             <h3>Project Goals</h3>
@@ -74,12 +74,36 @@
                 <li>Created extensive documentation, including tutorials and code examples</li>
             </ul>
 
-            <h3>Challenges and Learning</h3>
-            <p>Throughout the project, I faced several challenges, including optimizing the VLLM inference for real-time applications and ensuring compatibility with various datasets. These challenges provided valuable learning experiences in large-scale machine learning deployment and optimization techniques.</p>
+	    <h3>Challenges and Learning</h3>
+<p>Throughout the project, I encountered specific challenges related to model performance. The OpenAI ChatGPT model worked effectively out of the box, delivering satisfactory results. However, the open-source models presented significant difficulties—they were not trained to handle multiple images effectively or did not perform well in the tasks required. These challenges highlighted the limitations of current open-source models in comparison to proprietary solutions and underscored the importance of continued development and training for such models.</p>
 
-            <h3>Impact</h3>
-            <p>The integration of VLLMs into Anomalib has opened up new possibilities for anomaly detection in various domains, including manufacturing, healthcare, and security. The Zero-Shot and Few-Shot capabilities allow for more flexible and adaptable anomaly detection systems, reducing the need for large, labeled datasets.</p>
 
+            <h3>Code and Documentation</h3>
+           	<p>You can find the code I worked on during this project at the following repositories:</p>
+           	<ul>
+           		    <li><a href="https://github.com/openvinotoolkit/anomalib/pull/2190" target="_blank">Pull Request #2190 - VLLM Integration</a></li>
+           			<li><a href="https://github.com/Bepitic/anomalib/pull/1" target="_blank">Pull Request #1 - ChatGPT Integration</a></li>
+           			    <li><a href="https://github.com/openvinotoolkit/anomalib" target="_blank">Anomalib Repository</a></li>
+           				<li><a href="https://anomalib.readthedocs.io/en/latest/" target="_blank">Project Documentation</a></li>
+           	</ul>
+
+		<h3>Code Not Merged</h3>
+		<p>During the project, several models were explored but ultimately not merged due to performance issues. Below are the details of these models and the reasons they were not integrated into the main branch:</p>
+		<ul>
+			    <li><a href="https://github.com/Bepitic/anomalib/tree/Llava_model/src/anomalib/models/image/llava" target="_blank">LLaVA Model</a> - This model demonstrated poor performance and was unable to handle multi-shot scenarios effectively.</li>
+			        <li><a href="https://github.com/Bepitic/anomalib/tree/Llava_model/src/anomalib/models/image/llava_next" target="_blank">LLaVA Next Model</a> - Although this model performed better in zero-shot scenarios, it still struggled with multi-shot tasks, leading to its exclusion from the final integration.</li>
+				    <li><a href="https://github.com/Bepitic/anomalib/tree/Llava_model/src/anomalib/models/image/llm_ollama" target="_blank">Ollama Wrapper</a> - A wrapper for the Ollama model zoo, which similarly lacked the capability to handle multi-shot scenarios, resulting in suboptimal performance.</li>
+		</ul>
+
+           
+	    <h3>What's Left to Do</h3>
+            <p>While significant progress has been made, there are still several tasks left to complete:</p>
+            <ul>
+                <li><strong>Real-Time Inference Enhancements:</strong> Additional work is required to reduce latency and improve the speed of the anomaly detection models in real-time applications.</li>
+                <li><strong>Extended Testing and Validation:</strong> Comprehensive testing across a broader range of datasets and anomaly types is needed to validate the robustness and generalizability of the models.</li>
+                <li><strong>User Documentation and Tutorials:</strong> Although initial documentation has been created, more in-depth tutorials and guides are needed to help users fully leverage the new features.</li>
+                <li><strong>Community Feedback and Iteration:</strong> Engage with the open-source community to gather feedback, address issues, and iteratively improve the integration based on real-world use cases.</li>
+            </ul>
             <p>Overall, my Google Summer of Code experience was incredibly rewarding, allowing me to contribute to cutting-edge machine learning technology while collaborating with talented developers from around the world.</p>
         </article>
         <div class="back-link">
